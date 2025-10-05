@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Twink Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="led-bg"></canvas>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">🎮 Twink</a>
+      <nav class="nav">
+        <a href="apps.html">Apps</a>
+        <a href="roblox.html">Roblox</a>
+        <a href="#" id="about-link">About</a>
+        <a href="#" id="contact-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Curated Browser Games</h1>
+      <p class="lead">A website made for fun, and built by AI. Explore and play directly in your browser.</p>
+
+      <div class="controls">
+        <input id="search" placeholder="Search games by name, tag, or description…" aria-label="Search games" />
+        <select id="filter" aria-label="Filter by tag">
+          <option value="">All tags</option>
+          <option value="horror">Horror</option>
+          <option value="fps">FPS</option>
+          <option value="multiplayer">Multiplayer</option>
+          <option value="singleplayer">Singleplayer</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Twink Arcade — Made for fun by AI. Connect: 
+        <a href="https://www.tiktok.com/@tetepedrim" target="_blank">TikTok</a> | 
+        Discord: tetepedrimlol
+      </small>
+    </div>
+  </footer>
+
+  <template id="card-tpl">
+    <article class="card" role="article">
+      <div class="thumb"><img src="" alt="" /></div>
+      <div class="meta">
+        <h3 class="title"></h3>
+        <p class="desc"></p>
+        <div class="tags"></div>
+        <div class="actions">
+          <a class="play-btn" target="_blank">Play</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="led-bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
